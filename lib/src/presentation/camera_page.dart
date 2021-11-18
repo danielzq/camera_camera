@@ -90,28 +90,6 @@ class _CameraCameraState extends State<CameraCamera> {
                       key: UniqueKey(),
                       controller: controller,
                     ),
-                    if (bloc.status.preview.cameras.length > 1)
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Padding(
-                          padding: const EdgeInsets.all(32.0),
-                          child: InkWell(
-                            onTap: () {
-                              bloc.changeCamera();
-                            },
-                            child: CircleAvatar(
-                              radius: 20,
-                              backgroundColor: Colors.black.withOpacity(0.6),
-                              child: Icon(
-                                Platform.isAndroid
-                                    ? Icons.flip_camera_android
-                                    : Icons.flip_camera_ios,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
                   ],
                 ),
             failure: (message, _) => Container(
